@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<!--
+This is an HTML document. It contains information about how elements in the website
+are arranged. In other words, it describes the layout of a website.
+
+I can't wait to see the resumes you put together!
+
+Cameron Pittman, Udacity Course Developer
+-->
+
+<!--
+The <head> of a website generally links to important resources the page will
+need to load. You'll see a lot of <link>s to CSS files for styles and
+<scripts> for JavaScript files to build interactions.
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+
+  <!--
+  jQuery is a common JavaScript library for reading and making changes to the
+  Document Object Model (DOM). The DOM is a tree that contains information
+  about what is actually visible on a website.
+
+  While HTML is a static document, the browser converts HTML to the
+  DOM and the DOM can change. In fact, JavaScript's power comes from
+  its ability to manipulate the DOM, which is essentially a JavaScript
+  object. When JavaScript makes something interesting happen on a
+  website, it's likely the action happened because JavaScript changed
+  the DOM. jQuery is fast and easy to use, but it doesn't do anything
+  you can't accomplish with vanilla (regular) JavaScript.
+  -->
+  <!-- <script src="js/vendor/jQuery.js"></script> -->
+
+  <!-- More on helper.js in the class -->
+  <!-- <script src="js/helper.js"></script> -->
+
+  <!--
+  Uncomment the <script> tag below when you're ready to add an interactive
+  Google Map to your resume!
+  -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed|Sanchez:400italic,400|Bangers" rel="stylesheet" type="text/css">
+
+  <meta name="viewport" content="width=device-width">
+
+  <!--
+  Inject our svg icons. I think this needs to be in the head for now.
+  I've seen methods of delaying the injection, but I don't really grok
+  them yet. Would need to do more research.
+  -->
+  <script>
+    (function (doc) {
+      var scripts = doc.getElementsByTagName('script');
+      var script = scripts[scripts.length - 1];
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        var div = doc.createElement('div');
+        div.innerHTML = this.responseText;
+        div.style.display = 'none';
+        script.parentNode.insertBefore(div, script);
+      };
+      xhr.open('get', 'img/icons/icons.svg', true);
+      xhr.send();
+    })(document);
+  </script>
+
+</head>
+<body unresolved>
+<header id="header" class="main-header">
+<nav class="main-nav" id="main-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#workExperience">Work Experience</a></li>
+      <li class="nav-item"><a href="#projects">Projects</a></li>
+      <li class="nav-item"><a href="#education">Education</a></li>
+      <li class="nav-item"><a href="#skillsChart">Skills</a></li>
+      <li class="nav-item"><a href="#letsConnect">Connect</a></li>
+    </ul>
+    <a href="#" class="menu-toggle" id="menu-toggle">Menu</a>
+  </nav>
+</header>
+  <main id="main" class="content">
+
+    <!--
+    Everything from here to the <script> tag below is the skeleton of your
+    website. Your code will add information to each of the sections of the
+    resume below. You can pretty easily figure out what each section will
+    display by looking at the id or at what's written between the <h2> tags.
+    -->
+    <div class="container">
+      <div style="clear: both;"></div>
+      <div id="workExperience" class='gray section'>
+        <h2>Work Experience</h2>
+      </div>
+      <div id="projects" class="section">
+        <h2>Projects</h2>
+      </div>
+      <div id="education" class='gray section'>
+        <h2>Education</h2>
+      </div>
+      <div id="skillsChart" class="section">
+        <h2>Skills Chart</h2>
+        <div class="chart"></div>
+      </div>
+      <div id="mapDiv" class="section">
+        <h2>Where I've Lived and Worked</h2>
+        <div class="entry">
+          <div id="mapContainer">
+
+          </div>
+        </div>
+      </div>
+      <div id="letsConnect" class='dark-gray section'>
+        <h2 class="orange center-text">Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box contact-nav">
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="content">
+    <div class="notice-container">
+      <p class="notice">This is an entirely unofficial student work, created solely
+        for demonstration of specific proficiencies to instructors. Any characters,
+        likenesses, referenced literary works, imagery, logos or trademarks are
+        the property of their respective owners.
+        <span class="summation">
+          In summation: please don't sue me, I just like Batman and learning things.
+        </span>
+      </p>
+    </div>
+    </footer>
+
+
+  <!--
+    Generally I would go to considerable lengths to remove
+    unused code reduce requests via concatentation or
+    dependency management. Since that isn't the purpose of this
+    project I've elected to just leave this ugly blob here.
+  -->
+  <!-- <script src="js/vendor/jquery.scrollTo.min.js"></script>
+  <script src="js/vendor/jquery.localScroll.js"></script>
+  <script src="js/vendor/d3.v3.min.js" charset="utf-8"></script>
+  <script src="js/vendor/markerwithlabel.min.js"></script>
+  <script src="js/vendor/label.js"></script>
+  <script src="js/vendor/infobox.js"></script>
+  <script src="js/vendor/jquery.sticky.js"></script>
+  <script src="js/skillschart.js"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

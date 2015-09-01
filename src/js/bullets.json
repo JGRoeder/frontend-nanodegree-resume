@@ -1,0 +1,10 @@
+[
+  {"name": "Chemical Eng",    "value":  6},
+  {"name": "Close Combat",     "value": 5},
+  {"name": "Deception",   "value": 9},
+  {"name": "Taunts", "value": 11},
+  {"name": "Quips",     "value": 15},
+  {"name": "Intimidation",     "value": 6},
+  {"name": "Cheap Shots",     "value": 9},
+  {"name": "Sleight of Hand",     "value": 7}
+]

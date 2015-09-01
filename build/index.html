@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset=UTF-8><link href=css/main.css rel=stylesheet type=text/css><script type=text/javascript src="http://maps.googleapis.com/maps/api/js?libraries=places"></script><link href="http://fonts.googleapis.com/css?family=Roboto+Condensed|Sanchez:400italic,400|Bangers" rel=stylesheet type=text/css><meta name=viewport content="width=device-width"><script>
+    (function (doc) {
+      var scripts = doc.getElementsByTagName('script');
+      var script = scripts[scripts.length - 1];
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        var div = doc.createElement('div');
+        div.innerHTML = this.responseText;
+        div.style.display = 'none';
+        script.parentNode.insertBefore(div, script);
+      };
+      xhr.open('get', 'img/icons/icons.svg', true);
+      xhr.send();
+    })(document);
+  </script></head><body unresolved><header id=header class=main-header><nav class=main-nav id=main-nav><ul class=nav-list><li class=nav-item><a href=#workExperience>Work Experience</a></li><li class=nav-item><a href=#projects>Projects</a></li><li class=nav-item><a href=#education>Education</a></li><li class=nav-item><a href=#skillsChart>Skills</a></li><li class=nav-item><a href=#letsConnect>Connect</a></li></ul><a href=# class=menu-toggle id=menu-toggle>Menu</a></nav></header><main id=main class=content><div class=container><div style="clear: both;"></div><div id=workExperience class="gray section"><h2>Work Experience</h2></div><div id=projects class=section><h2>Projects</h2></div><div id=education class="gray section"><h2>Education</h2></div><div id=skillsChart class=section><h2>Skills Chart</h2><div class=chart></div></div><div id=mapDiv class=section><h2>Where I've Lived and Worked</h2><div class=entry><div id=mapContainer></div></div></div><div id=letsConnect class="dark-gray section"><h2 class="orange center-text">Let's Connect</h2><ul id=footerContacts class="flex-box contact-nav"></ul></div></div></main><footer class=content><div class=notice-container><p class=notice>This is an entirely unofficial student work, created solely for demonstration of specific proficiencies to instructors. Any characters, likenesses, referenced literary works, imagery, logos or trademarks are the property of their respective owners. <span class=summation>In summation: please don't sue me, I just like Batman and learning things.</span></p></div></footer><script src=js/main.js></script></body></html>
